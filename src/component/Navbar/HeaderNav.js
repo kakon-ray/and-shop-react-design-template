@@ -18,8 +18,6 @@ import OffCanvas from "../OffCanvas/OffCanvasSearch/OffCanvas";
 
 import { Link } from "react-router-dom";
 import CustomLink from "../CustomLink/CustomLink";
-import { wishListContext } from "../../Contexts/wishListContext";
-import { CartContext } from "../../Contexts/CartContext";
 import CartShow from "../OffCanvas/CartShow/CartShow";
 import WishListShow from "../OffCanvas/WishListShow/WishListShow";
 
@@ -41,8 +39,6 @@ const HeaderNav = () => {
   const handleClosWishLIst = () => setShowWishList(false);
   const handleShowWishList = () => setShowWishList(true);
 
-  const [wishList, setWishList] = useContext(wishListContext);
-  const [cartList, setCartList] = useContext(CartContext);
 
   return (
     <>
@@ -138,7 +134,7 @@ const HeaderNav = () => {
             >
               <FontAwesomeIcon icon={faHeart} size="xl" />
               <span className="position-absolute  translate-middle badge rounded-pill p-1">
-                {wishList.length}
+                5
                 <span className="visually-hidden">unread messages</span>
               </span>
             </Button>
@@ -149,7 +145,7 @@ const HeaderNav = () => {
             >
               <FontAwesomeIcon icon={faShoppingBag} size="xl" />
               <span className="position-absolute top-5 start-99 translate-middle badge rounded-pill p-1">
-                {cartList.length}
+               5
                 <span className="visually-hidden">unread messages</span>
               </span>
             </Button>
@@ -176,7 +172,6 @@ const HeaderNav = () => {
         placement={"end"}
       />
       <WishListShow
-        wishList={wishList}
         showWishList={showWishList}
         handleClosWishLIst={handleClosWishLIst}
         placement={"end"}

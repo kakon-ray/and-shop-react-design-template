@@ -1,10 +1,7 @@
 import React, { useContext } from "react";
 import {
   Button,
-  FormControl,
-  InputGroup,
   Offcanvas,
-  OffcanvasBody,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { wishListContext } from "../../../Contexts/wishListContext";

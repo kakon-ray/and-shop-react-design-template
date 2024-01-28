@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, FormControl, InputGroup, Offcanvas } from "react-bootstrap";
+import { Offcanvas } from "react-bootstrap";
 import style from "./DashboardOffCanvas.module.css";
 
 import DashboardSidebar from "../../../Dashboard/DashboardSidebar/DashboardSidebar";
